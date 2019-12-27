@@ -37,6 +37,7 @@ before_script:
       make;
       sudo env PATH=$PATH make install;
       sudo cp /usr/local/bin/elixir /usr/bin/;
+      export PATH=/usr/bin:$PATH;
       which elixir;
     fi  
   - elixir --version
