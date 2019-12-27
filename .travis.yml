@@ -30,6 +30,15 @@ matrix:
       arch: s390x
 
 before_script:
+  - if [[ $(uname -m) == 's390x' ]]; then
+      git clone git://github.com/elixir-lang/elixir
+      cd elixir
+      git checkout v1.7.0
+      make
+      sudo env PATH=$PATH make install
+      sudo cp /usr/local/bin/elixir /usr/bin/
+      which elixir
+    fi  
   - elixir --version
   # The checkout made by Travis is a "detached HEAD" and branches
   # information is missing. Our Erlang.mk's git_rmq fetch method relies
