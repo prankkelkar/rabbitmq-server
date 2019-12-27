@@ -38,6 +38,7 @@ before_script:
       sudo env PATH=$PATH make install;
       cp /usr/local/bin/elixir /home/travis/.kiex/elixirs/elixir-1.9.1/bin/;
       which elixir;
+      elixir --version;
     fi  
   - elixir --version
   # The checkout made by Travis is a "detached HEAD" and branches
