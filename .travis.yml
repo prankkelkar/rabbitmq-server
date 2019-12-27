@@ -36,6 +36,7 @@ before_script:
       git checkout v1.7.0;
       make;
       sudo env PATH=$PATH make install;
+      rm -rf /home/travis/.kiex/elixirs/elixir-1.9.1/bin/elixir
       cp /usr/local/bin/elixir /home/travis/.kiex/elixirs/elixir-1.9.1/bin/;
       which elixir;
       elixir --version;
