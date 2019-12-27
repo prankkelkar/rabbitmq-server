@@ -23,6 +23,12 @@ env:
 otp_release:
   - "21.3"
 
+matrix:
+  include:
+    - os: linux
+    - os: linux
+      arch: s390x
+
 before_script:
   - elixir --version
   # The checkout made by Travis is a "detached HEAD" and branches
@@ -40,6 +46,10 @@ before_script:
 script:
   - make xref
   - make ct-fast
+
+branches:
+  only:
+    - s390x
 
 after_failure:
   - |
