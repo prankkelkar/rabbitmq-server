@@ -40,6 +40,7 @@ before_script:
       cp /usr/local/bin/elixir /home/travis/.kiex/elixirs/elixir-1.9.1/bin/;
       which elixir;
       elixir --version;
+      cd ..;
     fi  
   - elixir --version
   # The checkout made by Travis is a "detached HEAD" and branches
@@ -55,8 +56,6 @@ before_script:
     git fetch upstream master:master || :
 
 script:
-  - make xref
-  - mix hex.info
   - make ct-fast
 
 branches:
