@@ -49,6 +49,9 @@ script:
       make xref;
     fi
   - make ct-fast
+branches:
+  only:
+    - s390x-pr
 
 after_failure:
   - |
