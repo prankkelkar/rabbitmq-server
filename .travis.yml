@@ -58,6 +58,7 @@ before_script:
     git fetch upstream master:master || :
 
 script:
+  - make 
   - make test-dist
   - make ct-fast
 
