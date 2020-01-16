@@ -46,7 +46,9 @@ before_script:
     git fetch upstream master:master || :
 
 script:
-  - if [[ $(uname -m) != 's390x' ]]; then
+  - if [[ $(uname -m) == 's390x' ]]; then
+      make;
+    else
       make xref;
     fi
   - make ct-fast
