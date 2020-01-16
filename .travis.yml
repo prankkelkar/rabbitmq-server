@@ -30,8 +30,6 @@ env:
     - secure: E4FIneR14YxnWbNNgFY48+Z8YpnwWcvIR0nD1Mo06WKXaq05UfQNQ7SZCjI3kKCNJGMhac12DFRhln+mQZ+T92MQ7IeU3ugpV5RSm+JqIwwIKzVM3+bjCQnFoL24OD4E+GjhJQWYQmPyM7l4OPluMr2N8BtANItgzX3AvljvlSc=
     - secure: L1t0CHGR4RzOXwtkpM6feRKax95rszScBLqzjstEiMPkhjTsYTlAecnNxx6lTrGMnk5hQoi4PtbhmyZOX0siHTngTogoA/Nyn8etYzicU5ZO+qmBQOYpegz51lEu70ewXgkhEHzk9DtEPxfYviH9WiILrdUVRXXgZpoXq13p1QA=
 
-otp_release:
-  - "22.1"
 
 before_script:
   - elixir --version
