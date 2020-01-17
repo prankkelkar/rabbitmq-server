@@ -24,8 +24,6 @@ env:
 matrix:
   include:
     - os: linux
-      otp_release:
-        - "22.1"
     - os: linux
       arch: s390x
       otp_release:
@@ -60,6 +58,7 @@ before_script:
     git fetch upstream master:master || :
 
 script:
+  - make
   - make ct-fast
 
 branches:
